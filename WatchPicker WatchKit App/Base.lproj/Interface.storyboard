@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CaviarDreams_BoldItalic.ttf">
+            <string>CaviarDreams-BoldItalic</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchPicker_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" verticalAlignment="bottom" text="zero" textAlignment="center" id="6Ir-kc-yWf">
+                            <fontDescription key="font" name="CaviarDreams-BoldItalic" family="Caviar Dreams" pointSize="14"/>
+                        </label>
+                        <group width="100" height="100" alignment="center" verticalAlignment="center" id="fkF-1t-MNy">
+                            <items>
+                                <picker width="65" height="32" alignment="center" verticalAlignment="center" style="sequence" id="h69-Hq-Yyz">
+                                    <connections>
+                                        <action selector="pickerChanged:" destination="AgC-eL-Hgc" id="gz7-Pe-rDE"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="myGroup" destination="fkF-1t-MNy" id="Cit-Va-nuy"/>
+                        <outlet property="myLabel" destination="6Ir-kc-yWf" id="uje-Y8-6JV"/>
+                        <outlet property="myPicker" destination="h69-Hq-Yyz" id="NrY-mC-YZp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="170" y="430"/>
+        </scene>
+    </scenes>
+</document>
